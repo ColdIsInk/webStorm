@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="css/player.css">
+
+</head>
+<body>
+<header class="head">Music&emsp;player</header>
+<audio id="mya"></audio>
+    <section class="info" id="photo">
+        <img id="bgImg" class="bgImg" width="600px" height="300px">
+        <ul>
+            <li><img id="singerImg" class="singerImg"></li>
+            <li><p class="song" id="song"></p>
+                <p class="singer" id="singer"></p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="time">
+        <ul>
+            <li class="timer" id="nowTime">00:00</li>
+            <li class="progress">
+                <input type="range" id="progress" min="0" max="1"  value="0" step="0.01">
+                <span class="pro_cover" id="pro_cover"></span>
+            </li>
+            <li class="timer" id="totalTime">00:00</li>
+        </ul>
+    </section>
+
+    <section class="function" id="btn">
+     <button id="front" type="button" title="上一首"><img src="images/front.png" height="60" width="60"/></button>
+     <button id="btnPlay" type="button" title="播放"><img src="images/play.png" height="80" width="80"/></button>
+     <button id="btnStop" type="button" title="暂停"><img src="images/stop.png" height="80" width="80"/></button>
+     <button id="next" type="button" title="下一首"><img src="images/next.png" height="60" width="60"/></button>
+     <button id="sound" type="button" title="静音"><img src="images/sound.png" height="30" width="30"/></button>
+     <button id="noSound" type="button" class="noSound" title="取消静音">
+           <img src="images/nosound.png" height="30" width="30"/></button>
+        <input type="range" id="voice" min="0" max="1"  value="0.5" step="0.1">
+      <button id="playList" type="button" title="播放列表"><img src="images/list.png" height="36" width="36"/></button>
+      <button type="button" id="play_way"><img id="play_way_img" title="">
+      </button>
+      <div class="list" id="list">
+         <header class="list-title">播放列表
+            <span><a href="#" class="close" id="close" title="关闭列表">×</a></span>
+        </header>
+        <div id="songsList" class="songsList">
+       </div>
+      </div>
+
+        <ul class="way" id="way">
+        <li index="0"><img src="images/list_cycle.png" height="20" width="20"/><span>列表循环</span></li>
+        <li index="1"><img src="images/single_cycle.png" height="20" width="20"/><span>单曲循环</span></li>
+        <li index="2"><img src="images/random.png" height="20" width="20"/><span>随机播放</span></li>
+    </ul>
+        <div class="voice_cover" id="voice_cover"></div>
+    </section>
+
+<script src="js/video.js"></script>
+</body>
+</html>

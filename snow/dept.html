@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>部门页面</title>
+    <link rel="stylesheet" href="css/dept.css">
+    <link rel="stylesheet" href="css/layui.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+<style>
+    iframe{
+        float: right;
+    }
+    .shoppingCart:hover i{
+        color: #ff48b1;
+    }
+
+    .layui-nav{height: 60px;}
+    .layui-logo{
+        color: #FF5722;
+        width: 180px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .search{width: 50%;height:42px;margin-right: auto;margin-left: auto;margin-top: 20px;}
+    .search input{width: 85%;height: 38px;padding-left: 1.9%;font-size: 16px}
+    .search input::-webkit-input-placeholder{font-size: 14px;}
+    .search>button{width:11%;height: 42px;border-radius: 4px;margin-top: -1px;}
+</style>
+
+
+</head>
+<body>
+    <!--头部，导航-->
+    <div class="layui-header layui-bg-black">
+        <div class="layui-logo">墨寒校园二手交易</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    我的二手
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">待付款</a></dd>
+                    <dd><a href="">待发货</a></dd>
+                    <dd><a href="">待收货</a></dd>
+                    <dd><a href="">评&emsp;价</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;" class="shoppingCart">
+                    <i class="layui-icon layui-icon-cart" style="font-size: 18px;"></i> 购物车
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">购物车1</a></dd>
+                    <dd><a href="">购物车2</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;" class="shoppingCart">
+                    卖家中心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">成为卖家</a></dd>
+                    <dd><a href="">成为卖家</a></dd>
+                    <dd><a href="">出售中的商品</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    ${username}
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                    <dd><a href="">退&emsp;&emsp;出</a></dd>
+                </dl>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <!--搜索栏，搜索框-->
+<div class="search">
+    <input type="text" id="search_text" placeholder="请输入您想宝贝的名字或类型"/>
+    <button id="search" class="layui-btn layui-btn-warm" title="搜 索">搜 索</button>
+</div>
+
+<div>
+
+</div>
+
+
+<script src="js/layui.all.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+
+
+</script>
+</body>
+</html>

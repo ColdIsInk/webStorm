@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级菜单</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li,ol{
+            list-style:none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav{
+            font-size: 18px;
+            height: 60px;
+        }
+        .menu>li{
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: #1471ff;
+        }
+        .menu>li a{
+            color: #ffffff;
+        }
+        .second>li{
+            height: 40px;
+            line-height: 40px;
+            background: #05e1ff;
+        }
+        .sidebar{
+            width: 200px;
+            margin-top: 30px;
+
+        }
+        .bar-first>li>a{
+            display:block;
+            padding-left: 15px;
+            width: 200px;
+            height: 32px;
+            line-height: 32px;
+            background:url("images/bck.png") repeat-x;
+
+        }
+        .bar-second>li>a{
+            display: inline-block;
+            width: 195px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+        }
+        .second-bck{
+            background: #666666;
+            color:#ffffff;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<!--导航-->
+<div class="nav">
+    <ul class="menu">
+        <li><a href="#" title="学校首页">学校首页</a></li>
+        <li><a href="#" title="学院概括">学院概括</a>
+            <ul class="second">
+                <li><a href="#" title="学校简介">学校简介</a></li>
+                <li><a href="#" title="校长寄语">校长寄语</a></li>
+                <li><a href="#" title="现任领导">现任领导</a></li>
+                <li><a href="#" title="领导关怀">领导关怀</a></li>
+                <li><a href="#" title="学院风光">学院风光</a></li>
+                <li><a href="#" title="信息公开">信息公开</a></li>
+            </ul>
+        </li>
+        <li><a href="#" title="机构设置">机构设置</a>
+            <ul class="second">
+                <li><a href="#" title="教学机构">教学机构</a></li>
+                <li><a href="#" title="管理机构">管理机构</a></li>
+                <li><a href="#" title="教辅机构">教辅机构</a></li>
+            </ul>
+        </li>
+        <li><a href="#" title="人才培养">人才培养</a></li>
+        <li><a href="#" title="科学研究">科学研究</a></li>
+        <li><a href="#" title="师资建设">师资建设</a></li>
+        <li><a href="#" title="招生就业">招生就业</a>
+            <ul class="second">
+                <li><a href="#" title="阳光招生">阳光招生</a></li>
+                <li><a href="#" title="就业服务">就业服务</a></li>
+            </ul>
+        </li>
+        <li><a href="#" title="学生工作">学生工作</a>
+            <ul class="second">
+                <li><a href="#" title="学工在线">学工在线</a></li>
+                <li><a href="#" title="共青团服务">共青团服务</a></li>
+            </ul>
+        </li>
+        <li><a href="#" title="党群建设">党群建设</a></li>
+        <li><a href="#" title="国际合作">国际合作</a></li>
+        <li><a href="#" title="图书馆藏">图书馆藏</a></li>
+        <li><a href="#" title="公共服务">公共服务</a></li>
+    </ul>
+</div>
+
+<!--侧栏导航-->
+<div class="sidebar" >
+    <ul class="bar-first">
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;基本信息</a>
+            <ul class="bar-second">
+                <li><a href="#">课程介绍</a></li>
+                <li><a href="#">教学大纲</a></li>
+                <li><a href="#">教学日历</a></li>
+                <li><a href="#">教室信息</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;课程通知</a> </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;答疑讨论</a> </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;课程问卷</a> </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;学习笔记</a> </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;课程作业</a> </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;在线试题库</a>
+            <ul class="bar-second">
+                <li><a href="#">试题库</a></li>
+                <li><a href="#">试题卷</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;在线测试</a> </li>
+        <li><a href="#"><img src="images/xia.png" height="16" width="16"/>&ensp;常见问题</a> </li>
+
+    </ul>
+
+</div>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>部门内容</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+<style>
+    form{
+        margin-left: 10px;
+    }
+    .label{
+        width: 100px;
+        font-size: 16px;
+        margin-top: 4px;
+    }
+    input[type=text]{
+        width: 240px;
+        height: 32px;
+        border-radius: 4px;
+        margin-top: 4px;
+    }
+    input[type=text]:hover{
+        border-radius: 6px;
+        border: #000000 1px solid;
+    }
+ul li{
+    float: left;
+}
+</style>
+</head>
+<body>
+<form class="layui-form " role="form" action="#" method="post">
+   <ul>
+       <li>
+           <div class="layui-form-item">
+           <label class="label">上级ID</label>
+           <div>
+               <input type="text" name="parentId" class="layui-input"/>
+           </div>
+       </div>
+           <div class="layui-form-item">
+               <label class="label">编码</label>
+               <div>
+                   <input type="text" name="code" class="layui-input"/>
+               </div>
+           </div>
+           <div class="layui-form-item">
+               <label class="label">名称</label>
+               <div>
+                   <input type="text" name="name" class="layui-input"/>
+               </div>
+           </div >
+           <div class="layui-form-item">
+               <label class="label">简码</label>
+               <div>
+                   <input type="text" name="simCode" class="layui-input"/>
+               </div>
+           </div>
+           <div class="layui-form-item">
+               <label class="label">位置</label>
+               <div>
+                   <input type="text" name="location" class="layui-input"/>
+               </div>
+           </div>
+       </li>
+       <li style="margin-left: 40px">
+           <div class="layui-form-item">
+           <label class="label">末级</label>
+           <div>
+               <input type="text" name="finalNode" class="layui-input"/>
+           </div>
+       </div>
+           <div class="layui-form-item">
+               <label class="label">站点</label>
+               <div>
+                   <input type="text" name="site" class="layui-input"/>
+               </div>
+           </div>
+           <div class="layui-form-item">
+               <label class="label">环境类别</label>
+               <div>
+                   <input type="text" name="entCat" class="layui-input"/>
+               </div>
+           </div>
+           <div class="layui-form-item">
+               <label class="label">最后修改时间</label>
+               <div>
+                   <input type="text" name="lastTime" class="layui-input"/>
+               </div>
+           </div>
+       </li>
+   </ul>
+
+
+
+</form>
+
+<script src="js/layui.all.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

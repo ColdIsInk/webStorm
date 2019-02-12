@@ -1,0 +1,163 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;}
+a{
+  text-decoration:none;
+}
+img{
+  border:none;
+}
+body{
+  font-family:Arial, Verdana, "微软雅黑","宋体";
+  background-image: url("../images/snow.png");
+  background-size:cover;
+  overflow:hidden;
+}
+//登录界面样式
+.login_box{
+  width: 400px;
+  height: 260px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  //background: #ff6960;
+  h2{
+    text-align: center;
+    font-family: 华文行楷;
+    font-size: 40px;
+  }
+  form{
+    .input_in{
+      width:360px;
+      height: 40px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 12px;
+      border: rgba(74,108,239,0.92) solid 1px;
+      border-radius: 20px;
+      position: relative;
+      transition: all 0.5s;
+      &:hover{
+        border:#61ffda  solid 1px;
+        background: rgba(90,184,239,0.6);
+      }
+      span{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        margin: 5px 10px;
+        font-size: 30px;
+        color: #23262E;
+      }
+      input{
+        height: 40px;
+        width: 300px;
+        line-height: 40px;
+        margin-left: 50px;
+        color: #FFFFFF;
+        font-size: 16px;
+        display: inline-block;
+        border: none;
+        background: none;
+      }
+    }
+    button{
+      display: block;
+      width: 360px;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      border-radius: 20px;
+      font-size: 18px;
+    }
+  }
+  .other{
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+    a{
+      color: #888888;
+      &:hover{
+        color: #f2f2f2;
+      }
+    }
+  }
+}
+
+//注册界面样式
+.register_box{
+  width: 400px;
+  height: 406px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  //background: #ff6960;
+  h2{
+    text-align: center;
+    font-family: 华文行楷;
+    font-size: 40px;
+  }
+  form{
+    .input_in{
+      width:372px;
+      height: 40px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 12px;
+      //background: #888888;
+      position: relative;
+      transition: all 0.5s;
+      span{
+        width: 68px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        text-align: center;
+        font-size: 16px;
+        color:#000000;
+      }
+      input{
+        height: 40px;
+        width: 300px;
+        line-height: 40px;
+        margin-left: 72px;
+        color: #FFFFFF;
+        font-size: 16px;
+        display: inline-block;
+        border:#61ffda  solid 1px;
+        border-radius: 10px;
+        background: none;
+        text-indent: 6px;
+        background: rgba(207,234,239,0.2);
+        &:hover{
+          border:#61ffda  solid 1px;
+          border-radius: 12px;
+          background: rgba(90,184,239,0.6);
+        }
+      }
+    }
+    button{
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      margin-top: 20px;
+      border-radius: 12px;
+      margin-left: 12px;
+      font-size: 18px;
+    }
+  }
+  .goLogin{
+    margin-top: 18px;
+    float: right;
+    margin-right: 12px;
+    a{
+      color: #fff;
+      &:hover{
+        color: rgba(73,239,176,0.92);
+      }
+    }
+
+  }
+}

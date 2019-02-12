@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投票动画效果</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li,ol{
+            list-style:none;
+        }
+        img{
+            border: 0;
+            float: left;
+        }
+        .vote{
+            width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+        .person{
+            height: 80px;
+        }
+        .person>li{
+            float: left;
+        }
+        .person>li img{
+            border-radius: 50%;
+            margin-left: 30px;
+        }
+        .column{
+            width: 500px;
+            height: 250px;
+            margin-top: 12px;
+        }
+        .column>li{
+            float: left;
+            width: 60px;
+            background: #61ffda;
+            margin-left: 40px;
+            text-align: center;
+        }
+        .column>li:not(:first-child){
+            margin-left: 50px;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+
+
+</head>
+<body>
+<div class="vote">
+<ul class="person">
+    <li><img src="images/v1.jpg" height="80" width="80"/></li>
+    <li><img src="images/v2.jpg" height="80" width="80"/></li>
+    <li><img src="images/v3.jpg" height="80" width="80"/></li>
+    <li><img src="images/v4.jpg" height="80" width="80"/></li>
+</ul>
+<ul class="column">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+
+<script src="js/vote.js"></script>
+</body>
+</html>

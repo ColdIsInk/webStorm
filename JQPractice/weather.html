@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气预报</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li,ol{
+            list-style:none;
+        }
+        .weather{
+            width: 708px;
+            height: 600px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .weather h2{
+            font-family: 隶书;
+            font-size: 30px;
+            margin-left: 240px;
+            color: #37c3ff;
+            margin-top: 10px;
+        }
+        select{
+            margin-top: 20px;
+            width: 110px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        #province{
+            margin-left: 120px;
+        }
+        button{
+            width: 64px;
+            height: 34px;
+            font-size: 18px;
+            background: #61ffda;
+            border: #0eb8db 1px solid;
+            border-radius: 6px;
+            float: right;
+            margin-top: -34px;
+            margin-right:130px;
+        }
+        #time{
+            display: inline-block;
+            font-size: 22px;
+            width: 500px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-family: 华文行楷;
+            margin-left: 120px;
+            margin-top: 20px;
+        }
+        .content li{
+            width: 160px;
+            height: 190px;
+            text-align: center;
+            float: left;
+            margin-top: 20px;
+        }
+        .content li:first-child{
+            width: 216px;
+        }
+        .content li p{
+            margin-top: 12px;
+        }
+        .attention{
+            height: 100px;
+            font-size: 16px;
+            line-height: 30px;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/distpicker.data.min.js"></script>
+    <script src="js/distpicker.js"></script>
+
+
+</head>
+<body>
+
+<div class="weather" >
+    <h2>墨迹天气</h2>
+    <div class="city" data-toggle="distpicker">
+       <select class="form-control" id="province" data-province="重庆市"></select>
+       <select class="form-control" id="city" data-city=""></select>
+       <select class="form-control" id="county" data-county="巴南区"></select>
+    </div>
+    <button onclick="search()">搜索</button>
+    <time id="time"></time>
+    <ul class="content">
+
+    </ul>
+    <div class="attention">
+
+    </div>
+</div>
+
+<script src="js/weather.js"></script>
+</body>
+</html>

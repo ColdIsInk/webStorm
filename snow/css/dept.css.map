@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,CAAC,CAAC,OAAO,CAAE,CAAC,CAAC,MAAM,CAAE,CAAC,CACtB,CAAC,CACC,eAAe,CAAC,IAAI,CAEtB,GAAG,CACD,MAAM,CAAC,IAAI",
+"sources": ["dept.scss"],
+"names": [],
+"file": "dept.css"
+}

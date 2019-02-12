@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/reg.css">
+</head>
+<body>
+<form action="#" method="post">
+    <h1>注册</h1>
+    <input type="text" required placeholder="&emsp;请输入您的名字" pattern="\w{4,10}" id="username" onblur="user()">
+    <input type="password" id="password" required placeholder="&emsp;密码" pattern=".{6,18}" title="请输入6~18位字符">
+    <input type="password" id="repassword" required placeholder="&emsp;确认密码" title="请重复密码" onblur="psw()">
+    <input type="email" placeholder="&emsp;Email" title="请输入Email">
+    <input type="tel" required placeholder="&emsp;请输入你的手机号码" pattern="1[3578]\d{9}" title="请输入11位手机号码">
+    <label><input type="checkbox" required><span class="agree">&ensp;我同意相关协议</span> </label><br>
+    <input type="submit" value="注&ensp;册" title="注册">
+</form>
+
+<script src="js/reg.js"></script>
+</body>
+</html>

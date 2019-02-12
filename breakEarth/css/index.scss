@@ -1,0 +1,1242 @@
+@charset "utf-8";
+@import "animation.css";
+*{
+  margin:0;
+  padding:0;
+}
+ul,li,ol{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  border:none;
+}
+table{
+  border: none;
+  border-collapse: collapse;
+}
+body {
+  font-family:Arial, Verdana, "微软雅黑","宋体";
+  background: url("../images/bck.png") no-repeat;
+  background-size: 100% 2204px;
+}
+.clear{
+  clear:both;
+  border:none;
+  line-height:0;
+  font-size:0;
+  height:0;
+  overflow:hidden;
+}
+//标题
+.header{
+  height: 40px;
+  background:-webkit-gradient(linear, 2 top, 0 bottom, from(#f9f9f9), to(#ededed));
+  a:first-child{
+    margin-left: 180px;
+    z-index: 1000;
+  }
+  a:nth-of-type(3) {
+    margin-left: 50px;
+    position: relative;
+    filter: grayscale(40%);
+    &:hover{
+      filter: grayscale(0%);
+    }
+  }
+ .tit-login{
+   display: inline-block;
+   position: absolute;
+   top: 8px;
+   left: 970px;
+   width: 40px;
+   height: 20px;
+   color: #000;
+   font-size: 14px;
+   border-right: #000000 1px solid;
+   &:hover{
+     color: #31a0fe;
+     font-size: 16px;
+   }
+ }
+  .tit-reg{
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 1020px;
+    width: 40px;
+    height: 20px;
+    color: #000;
+    font-size: 14px;
+    &:hover{
+      color: #31a0fe;
+      font-size: 16px;
+    }
+  }
+  span{
+    position: absolute;
+    top:0px;
+    left: 1060px;
+    height: 40px;
+    width: 116px;
+    font-size: 12px;
+    color: #000;
+    filter: grayscale(80%);
+    perspective:500px;
+    transition: all 0.6s;
+    img:first-child{
+      margin-top: 8px;
+     padding-left: 8px;
+    }
+    a{
+      display: inline-block;
+      width: 56px;
+      height: 18px;
+      margin-left: 4px;
+    }
+    &:hover{
+      background: #ffffff;
+      filter: grayscale(0%);
+      color: #ff6960;
+      .xia{
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+}
+
+//更多游戏
+.moreGame{
+  width: 150px;
+  height: 320px;
+  background: #FFFFFF;
+  position: absolute;
+  top:40px;
+  left: 1040px;
+  display: none;
+
+  a{
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 6px;
+    margin-left: 20px;
+    color: #333333;
+    &:hover{
+      color: #ff2c2f;
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+//导航
+nav{
+  width: 1000px;
+  height: 168px;
+  margin-left: auto;
+  margin-right: auto;
+  background: -webkit-gradient(linear, 1 top, 0 bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0.2)));
+
+  >ul>li{
+    padding-top:30px;
+    float: left;
+    width: 132px;
+    height: 138px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 华文楷体;
+    font-weight: 600;
+    border-right: #cccccc 1px solid;
+    a{
+      color: #242424;
+    }
+    &:nth-child(4){
+      padding-top:0px;
+      width: 200px;
+      height: 0px;
+      animation: logoAni 2s linear forwards;
+      overflow: hidden;
+    }
+    &:nth-child(7){
+      border-right: none;
+    }
+    >ul {//二级菜单
+      height: 0px;
+      overflow: hidden;
+      > li {
+        font-weight: 100;
+        font-size: 14px;
+        font-family: "Microsoft YaHei UI";
+        margin-top: 6px;
+        &:hover a {
+          color: #e00;
+          font-size: 16px;
+          text-decoration: underline;
+        }
+      }
+    }
+    &:hover >ul{
+        animation: secondNav 1s linear forwards;//forwards保持在最后一帧
+  }
+  }
+}
+
+//header.swf
+.video{
+  display: block;
+  width: 460px;
+  height: 220px;
+  margin-top: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  background: none;
+}
+
+main{
+  width: 1000px;
+  margin-left:auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: -20px;
+}
+//登录
+.start {
+  width: 240px;
+  height: 300px;
+  margin-top: -20px;
+  button {
+    float: left;
+    width: 120px;
+    background: #881a11;
+    height: 40px;
+    font-family: 宋体;
+    font-size: 20px;
+    color: #ffffff;
+    border: #f0ce0f 1px solid;
+    margin-top: -3px;
+    cursor: pointer;
+  }
+  .btn-reg:hover, .btn-cz:hover {
+    background-color: #c35307;
+  }
+  .login { //登录有关
+    width: 240px;
+    height: 180px;
+    border: #83bbb4 1px solid;
+    background: -webkit-gradient(linear, 1 top, 0 bottom, from(#f2f9f6), to(#c0ddd8));
+    input[type=text], input[type=password] {
+      margin-top: 8px;
+      margin-left: 12px;
+      width: 150px;
+      height: 22px;
+    }
+    .btn-log { //登录按钮
+      width: 60px;
+      height: 60px;
+      margin-left: 174px;
+      background: #f99d00;
+      margin-top: -60px;
+      font-size: 24px;
+      color: #0b4f49;
+      font-family: 华文楷体;
+      border-radius: 8px;
+    }
+    label {
+      margin-left: 12px;
+      font-size: 14px;
+      input[type=checkbox] {
+        margin-top: 12px;
+      }
+    }
+    .forget {
+      font-size: 14px;
+      margin-left: 54px;
+      color: #333333;
+      &:hover {
+        color: #ff2c2f;
+        font-size: 16px;
+      }
+    }
+    p {
+      display: inline-block;
+      height: 28px;
+      margin-top: 12px;
+      margin-left: 12px;
+      line-height: 28px;
+      span {
+        float: left;
+      }
+      .other {
+        cursor: pointer;
+        float: left;
+        img {
+          filter: grayscale(80%);
+          &:hover {
+            filter: grayscale(0%);
+          }
+
+        }
+      }
+    }
+  }
+}
+
+//banner
+.banner{
+  height: 200px;
+  width: 740px;
+  margin-left: 260px;
+  margin-top: -220px;
+  border: #000000 1px solid;
+  #picture{
+    width: 530px;
+    height: 200px;
+    overflow: hidden;
+    img:hover{
+      transform:scale(1.3,1.1);
+      transition:all 0.5s;
+    }
+  }
+  .trigger {
+      float: right;
+      margin-top: -200px;
+      .banner_li_hover {
+        //banner下面li鼠标放上样式
+        background: -webkit-gradient(linear, left 3, right 0, from(#35aeb4), to(#04606a));
+        color: #ffffff;
+        letter-spacing: 2px;
+      }
+      a {
+        display: inline-block;
+        padding-left: 10px;
+        height: 39px;
+        width: 200px;
+        color: #619b9d;
+        line-height: 39px;
+        font-size: 18px;
+        background: -webkit-gradient(linear, left 3, right 0, from(#e4f3f1), to(#9ad5ce));
+        border-bottom: #dcf0ee 1px solid;
+      }
+    }
+
+}
+
+//领取新手卡
+.xinshou{
+  margin-top: 8px;
+}
+
+//推荐服务器
+.server{
+  width: 240px;
+  height: 262px;
+  margin-top: 8px;
+  border: #c0ddd8 1px solid;
+  background: #c0ddd8;
+  h3>a{
+    display: inline-block;
+    width: 240px;
+    height: 40px;
+    color: #ffda6d;
+    line-height: 40px;
+    text-align: center;
+    background: url("../images/server_bck.jpg") no-repeat;
+    &:hover{
+      color:#61ffda;
+      letter-spacing: 3px;
+    }
+  }
+  .server_content{
+    height: 210px;
+    width: 230px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border: #c0ddd8 1px solid;
+    background: #ffffff;
+    li{
+      width: 210px;
+      height: 30px;
+      line-height: 30px;
+      border: #cccccc 1px solid;
+      border-radius: 5px;
+      font-size: 15px;
+      background:-webkit-gradient(linear,1 top, 0 bottom, from(#d6e6e4), to(#9cc4bf));
+      margin-top: 8px;
+      margin-left: 6px;
+      span{
+        float: right;
+        width: 40px;
+        margin-right: 3px;
+        height: 24px;
+        margin-top: 3px;
+        line-height: 24px;
+        border-radius: 3px;
+        background: #208c00;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+    p{
+      width: 140px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background: #048d7b;
+      border-radius: 6px;
+      margin-left: 40px;
+      margin-top: 10px;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+  }
+
+}
+
+//排行榜
+.ranking{
+  width: 240px;
+  height: 256px;
+  margin-top: 8px;
+  border: #c0ddd8 1px solid;
+  background: #c0ddd8;
+  h3>a {
+    display: inline-block;
+    width: 240px;
+    height: 40px;
+    color: #ffda6d;
+    line-height: 40px;
+    text-align: center;
+    background: url("../images/server_bck.jpg") no-repeat;
+    &:hover {
+      color: #37c3ff;
+      letter-spacing: 3px;
+    }
+  }
+  .ranking-content{
+    width: 230px;
+    height: 200px;
+    background: #FFFFFF;
+    margin-left: 5px;
+    margin-top: 6px;
+    animation: rank 2s linear forwards;
+    select{
+      width: 105px;
+      height: 25px;
+      margin-left: 5px;
+      margin-top: 6px;
+    }
+    .power,.wealth,.prestige{//战斗力排行
+      border-collapse: collapse;
+      margin-top: 6px;
+      margin-left: 5px;
+      tr{
+        width:220px;
+        font-size: 15px;
+        height: 26px;
+        border-bottom: #cccccc 1px dashed;
+        &:first-child{
+          background: #61ffda;
+          height: 30px;
+          font-size: 18px;
+          border: none;
+        }
+        &:not(:first-child){
+          margin-top: 4px;
+          td{
+            span{
+              display: inline-block;
+              width: 20px;
+              height: 17px;
+              color: #FFFFFF;
+              border-radius: 4px;
+              text-align: center;
+            }
+          }
+
+        }
+        td{
+          text-align: center;
+          &:first-child{
+            width: 50px;
+          }
+          &:nth-child(2){
+            width: 95px;
+          }
+          &:nth-child(3){
+            width: 75px;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+//微博
+.weibo{
+  width: 240px;
+  height: 185px;
+  background: #c0ddd8;
+  margin-top: 10px;
+  ul{
+    width: 240px;
+    height: 40px;
+    background:#097682;
+    li{
+      text-align: center;
+      width: 120px;
+      height: 40px;
+      float: left;
+      &:first-child{
+        background: rgba(4,41,82,0.93);
+        color: #ff2c2f;
+      }
+      span{
+        float: left;
+        margin-top: 8px;
+        margin-left: 6px;
+      }
+      &:nth-child(2):hover{
+        background: rgba(4,41,82,0.93);
+        color: #1292D5;
+      }
+    }
+  }
+  .xinLang{
+    width: 230px;
+    height: 120px;
+    background: #FFFFFF;
+    margin-top: 10px;
+    margin-left: 6px;
+    span{
+      float: left;
+      margin-top: 10px;
+      margin-left: 5px;
+      &:nth-child(2){
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      a{
+        display: inline-block;
+        width: 100px;
+        height: 26px;
+        border: #08839a 1px solid;
+        background: #0eb8db;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+        padding-top: 6px;
+        b{
+          font-size: 26px;
+          float: left;
+          margin-left: 6px;
+          margin-top: -3px;
+        }
+        &:hover{
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+//游戏简介
+.introduction{
+  width: 240px;
+  height: 260px;
+  background: #c0ddd8;
+  margin-top: 10px;
+  h3>a{
+    display: inline-block;
+    width: 242px;
+    height: 40px;
+    text-align: center;
+    color: #ffda6d;
+    font-size: 20px;
+    line-height: 40px;
+    background: url("../images/server_bck.jpg") no-repeat;
+    &:hover {
+      color: #37c3ff;
+      letter-spacing: 3px;
+    }
+  }
+  p{
+    display: inline-block;
+    width: 200px;
+    text-align:justify;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 20px;
+    color: #0b4f49;
+  }
+}
+//客服中心
+.customer{
+  width: 240px;
+  height: 220px;
+  background: #c0ddd8;
+  margin-top: 10px;
+  h3>a{
+    display: inline-block;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    color: #ffda6d;
+    font-size: 20px;
+    line-height: 40px;
+    background: url("../images/server_bck.jpg") no-repeat;
+    &:hover {
+      color: #37c3ff;
+      letter-spacing: 3px;
+    }
+  }
+  ul{
+    width: 220px;
+    height: 150px;
+    background: #FFFFFF;
+    margin-left: 10px;
+    font-size: 15px;
+    padding-top: 10px;
+    margin-top: 10px;
+    li{
+      margin-top: 6px;
+      margin-left: 24px;
+      a{
+        display: inline-block;
+        width: 90px;
+        height: 22px;
+        background: #37c3ff;
+        border-radius: 4px;
+        text-align: center;
+        color: rgba(240,239,165,0.97);
+      }
+    }
+  }
+}
+
+//合作媒体
+.cooperation{
+  width: 240px;
+  height: 180px;
+  background: #c0ddd8;
+  margin-top: 10px;
+  h3>a{
+    display: inline-block;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    color: #ffda6d;
+    font-size: 20px;
+    line-height: 40px;
+    background: url("../images/server_bck.jpg") no-repeat;
+    &:hover {
+      color: #37c3ff;
+      letter-spacing: 3px;
+    }
+  }
+  .scroll{
+    height: 120px;
+    overflow: hidden;
+    margin-top: 10px;
+    table{
+      margin-left: auto;
+      margin-right: auto;
+      tr{
+        height: 60px;
+      }
+    }
+  }
+
+
+}
+
+//NEWS 新闻、活动、媒体
+.NEWS{
+  width: 10px;
+  height: 290px;
+  position: absolute;
+  top:300px;
+  left: 260px;
+  overflow: hidden;
+  .NEWS-title{
+    height: 38px;
+    font-size: 20px;
+    //绘制条纹背景 偏移度、下、上
+    background: linear-gradient(30deg, #046672 80%, #2980B9 20%);
+    background-size:10px 10px;
+    padding-left: 10px;
+    border: #274c4f 2px solid;
+    li{
+      width: 60px;
+      height: 34px;
+      line-height: 32px;
+      margin-top: 6px;
+      float: left;
+      text-align:center;
+      font-family: 隶书;
+      a{
+        color: #ffdd78;
+        font-size: 20px;
+      }
+    }
+    .NEWS_li_hover{
+      background: #e5f7ee;
+      a{
+        color: #000000;
+      }
+
+    }
+  }
+  .NEWS_head{
+    margin-top: 10px;
+    margin-left: 14px;
+    width: 440px;
+    height: 80px;
+    background: #FFFFFF;
+    padding-top: 6px;
+    .NEWS_head_title a{
+      color: rgba(250,7,42,0.97);
+      margin-left:40px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .NEWS_head_content{
+      text-align: justify;
+      margin-top: 8px;
+      a{
+        color: #333333;
+        font-size: 14px;
+        margin-left: 40px;
+        line-height: 24px;
+      }
+    }
+  }
+  .news,.huoDong,.media{
+    font-size: 15px;
+    margin-left: 12px;
+    li{
+      width: 440px;
+      height: 24px;
+      line-height: 24px;
+      margin-top: 4px;
+      border-bottom: #333333 1px dashed;
+      a:nth-child(2){
+        margin-left: 10px;
+      }
+      a{
+        color: #04616d;
+        &:hover {
+        color: #ff6960;
+        text-decoration: underline;
+        font-size: 16px;
+        }
+      }
+      span{
+        float: right;
+        margin-right: 2px;
+      }
+    }
+  }
+  .NEWS_img{
+    animation: rank 1.5s linear forwards;
+    position: absolute;
+    top:62px;
+    left: 474px;
+    &:hover{
+      top:54px;
+    }
+  }
+}
+
+//游戏内图片
+.game_pic{
+  width: 740px;
+  height: 124px;
+  position: absolute;
+  top: 600px;
+  left: 260px;
+  ul li{
+    width: 234px;
+    height: 124px;
+    background: #FFFFFF;
+    border: #9ad0de 1px solid;
+    float: left;
+    margin-left: 16px;
+    overflow: hidden;
+    &:first-child{
+      margin-left: 0px;
+    }
+    &:hover{
+      margin-top: -6px;
+      img{
+        transform: scale(1.1,1.1);
+        transition: all 0.6s;
+      }
+    }
+    img{
+      margin-top: 3px;
+      margin-left: 4px;
+    }
+
+  }
+}
+
+//游戏资料
+.information{
+  width: 740px;
+  height: 230px;
+  position: absolute;
+  top:740px;
+  left: 260px;
+  //标题
+  h3{
+    height: 40px;
+    background:-webkit-gradient(linear,1 top, 2 bottom, from(#078fab), to(#067471));
+    border: #274c4f 1px solid;
+    line-height: 40px;
+    span{
+      float: left;
+      height: 40px;
+      margin-left: 20px;
+      img{
+        animation: gu 2s linear infinite;
+      }
+      a{
+        color: #ffdc76;
+        &:hover{
+          letter-spacing: 3px;
+        }
+      }
+    }
+    .more{
+      float: right;
+      margin-right: 10px;
+      a{
+        color: #e7faff;
+        font-size: 11px;
+        font-family: 方正舒体;
+        &:hover{
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+      }
+
+    }
+  }
+  //内容
+  .info_content{
+    .info_content_title{
+      width: 128px;
+      background: #c9edf5;
+      li{
+        height: 60px;
+        border: #bbd5d1 1px solid;
+        text-align: center;
+        line-height: 60px;
+        a{
+          color: #3d4646;
+          font-size: 18px;
+          &:hover{
+            color: rgba(255,100,170,0.88);
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+    .info-con{
+      width: 612px;
+      height: 180px;
+      margin-left: 128px;
+      margin-top: -186px;
+      font-size: 14px;
+      line-height: 30px;
+      li{
+        height: 60px;
+        border: #bbd5d1 1px solid;
+        padding-left: 6px;
+        a{
+          display: inline-block;
+          width: 72px;
+          height: 30px;
+          color: #0b4f49;
+          &:hover{
+            color: #b50303;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+//职业介绍
+.occupation{
+  width: 740px;
+  height: 290px;
+  position: absolute;
+  top:980px;
+  left: 260px;
+  ul{
+    height: 38px;
+    font-size: 20px;
+    //绘制条纹背景 偏移度、下、上
+    background: linear-gradient(30deg, #046672 80%, #2980B9 20%);
+    background-size:10px 10px;
+    padding-left: 10px;
+    border: #274c4f 2px solid;
+    li{
+      width: 70px;
+      height: 34px;
+      line-height: 32px;
+      margin-top: 6px;
+      float: left;
+      text-align:center;
+      font-family: 隶书;
+      a{
+        color: #ffdd78;
+        font-size: 20px;
+      }
+    }
+    .occupation_li_hover{
+      background: #e5f7ee;
+      a{
+        color: #000000;
+      }
+    }
+  }
+  embed{
+    position: absolute;
+    top:93px;
+    left: 24px;
+  }
+  span{
+    position: absolute;
+    top:166px;
+    left: 270px;
+    display: inline-block;
+    width: 200px;
+    height: 90px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;
+    text-indent: 2em;
+  }
+}
+
+//游戏攻略
+.strategy{
+  width: 450px;
+  height: 222px;
+  position: absolute;
+  top:1290px;
+  left: 260px;
+  //标题
+  h3{
+    height: 40px;
+    background: linear-gradient(30deg, #046672 80%, #2980B9 20%);
+    background-size:10px 10px;
+    border: #274c4f 1px solid;
+    line-height: 40px;
+    span{
+      float: left;
+      height: 40px;
+      margin-left: 10px;
+      img{
+        animation: gu 1.5s linear infinite;
+      }
+      a{
+        color: #ffdc76;
+        margin-left:10px;
+        &:hover{
+          letter-spacing: 3px;
+        }
+      }
+    }
+    .more{
+      float: right;
+      margin-right: 10px;
+      a{
+        color: #e7faff;
+        font-size: 11px;
+        font-family: 方正舒体;
+        &:hover{
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+      }
+
+    }
+  }
+  .strategy-con{
+    width: 450px;
+    li{
+      height: 29px;
+      line-height: 29px;
+      list-style-type: -moz-gurmukhi;
+      font-size: 15px;
+      border-bottom: #999999 1px dashed;
+      span{
+        float: left;
+        height: 29px;
+        &:nth-child(3){
+          float: right;
+          margin-right: 6px;
+        }
+        a{
+          margin-left: 8px;
+          color: #0b4f49;
+        }
+      }
+      &:hover{
+        color: #ff2c2f;
+        a{
+          color: #ff2c2f;
+          text-decoration: underline;
+          letter-spacing: 2px;
+        }
+      }
+
+    }
+  }
+
+}
+
+//本期名人
+.celebrity{
+  width: 274px;
+  height: 222px;
+  position: absolute;
+  top:1290px;
+  left: 726px;
+  //标题
+  h3{
+    height: 40px;
+    background: linear-gradient(30deg, #046672 80%, #2980B9 20%);
+    background-size:10px 10px;
+    border: #274c4f 1px solid;
+    line-height: 40px;
+    span{
+      height: 40px;
+      a{
+        color: #ffdc76;
+        margin-left:15px;
+        &:hover{
+          letter-spacing: 3px;
+        }
+      }
+    }
+    .more{
+      float: right;
+      margin-right: 10px;
+      a{
+        color: #e7faff;
+        font-size: 11px;
+        font-family: 方正舒体;
+        &:hover{
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+      }
+
+    }
+  }
+  .celebrity_con{
+    height: 180px;
+    width: 272px;
+    background: #FFFFFF;
+    border: #bad5d1 1px solid;
+    span{
+      float: left;
+      margin-top: 5px;
+      margin-left: 8px;
+      &:first-child{
+        width: 140px;
+        height: 170px;
+        overflow: hidden;
+      }
+      &:nth-child(2){
+        width: 110px;
+        height: 170px;
+        line-height: 21px;
+        text-indent: 2em;
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+//游戏图册
+.gameAtlas{
+  width: 740px;
+  height: 230px;
+  position: absolute;
+  top:1528px;
+  left: 260px;
+  //标题
+  h3{
+    height: 40px;
+    background: linear-gradient(30deg, #046672 80%, #2980B9 20%);
+    background-size:10px 10px;
+    border: #274c4f 1px solid;
+    line-height: 40px;
+    ul{
+      width: 320px;
+      padding-left: 10px;
+      li{
+        width: 96px;
+        height: 36px;
+        line-height: 32px;
+        margin-top: 5px;
+        float: left;
+        text-align:center;
+        font-family: 隶书;
+        a{
+          color: #ffdd78;
+          font-size: 20px;
+        }
+      }
+      .gameAtlas_li_hover{
+        background: #e5f7ee;
+        a{
+          color: #000000;
+        }
+      }
+    }
+    span{
+      float: right;
+      height: 40px;
+      margin-right: 10px;
+      a{
+        color: #e7faff;
+        font-size: 11px;
+        font-family: 方正舒体;
+        &:hover{
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+      }
+
+    }
+  }
+  //游戏图册内容
+  .gameAtlas-content{
+    height: 190px;
+    width: 738px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: #bad5d1 1px solid;
+    border-top: none;
+    ul{
+      width: 720px;
+      height: 170px;
+      overflow: hidden;
+      margin-top: 10px;
+      margin-left:15px;
+      &:nth-child(2){
+        display: none;
+      }
+      &:nth-child(3){
+        display: none;
+      }
+      li{
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        perspective:500px;
+        transition: all 1s;
+        transform-origin:0px 0px;
+        &:first-child{
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+//尾部，版权
+footer{
+  width: 100%;
+  height: 200px;
+  .notice{
+    height: 62px;
+    background:-webkit-gradient(linear, 2 top, 1 bottom, from(#f9f9f9), to(#cdcdcd));
+    p{
+      font-size: 15px;
+      text-align: center;
+      color: #333333;
+      &:first-child{
+        color: #0b4f49;
+        padding-top: 10px;
+        a{
+          color: #0b8649;
+          &:hover{
+            color: #ff6960;
+            text-decoration: underline;
+          }
+        }
+
+      }
+      &:nth-child(2){
+        margin-top: 8px;
+      }
+
+    }
+  }
+  .copyright{
+    height: 140px;
+    background: #555555;
+    text-align: center;
+    font-size: 14px;
+    .copyright_nav{
+      height: 20px;
+      padding-top: 10px;
+      background: none;
+      a{
+        display: inline-block;
+        width: 70px;
+        height: 20px;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-left: 20px;
+        line-height: 20px;
+        &:hover{
+          color: #ff6960;
+          text-decoration: underline;
+          font-size: 16px;
+        }
+      }
+    }
+    p{
+      color: #cccccc;
+      &:nth-child(2){
+        margin-top: 10px;
+        a{
+          color: #cccccc;
+          margin-left: 6px;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+      &:nth-child(3),&:nth-child(4){
+        margin-top: 8px;
+        span{
+          margin-left: 6px;
+        }
+
+      }
+    }
+  }
+
+}

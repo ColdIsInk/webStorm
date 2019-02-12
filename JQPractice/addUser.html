@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery表达增、删、查询操作</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/addUser.css">
+    <script src="My97DatePicker/WdatePicker.js"></script>
+
+
+</head>
+<body>
+<header>
+    <button class="newAdd">新增</button>
+    姓 名<input type="text" placeholder="&emsp;请输入你想搜索的姓名" id="select">
+</header>
+<table id="userList">
+    <tr>
+        <td>序号</td>
+        <td>姓名</td>
+        <td>班级</td>
+        <td>出生日期</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>张三</td>
+        <td>001</td>
+        <td>1997-01-01</td>
+        <td><a href="#" title="删除">删除</a> </td>
+    </tr>
+    <tbody>
+
+    </tbody>
+</table>
+<div class="addUser">
+    <header>
+        <span>添加</span>
+        <a href="#" class="drop">×</a>
+    </header>
+    <ul class="content">
+        <li>姓&emsp;&emsp;名<input type="text" id="username" placeholder=" 姓名"></li>
+        <li>班&emsp;&emsp;级<input type="text" id="classCode" placeholder=" 班级"></li>
+        <li>出生日期<input id="birthDay" onclick="WdatePicker()" placeholder=" 出生日期"></li>
+        <button class="add">添加</button>
+        <button class="abandon">放弃</button>
+
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="mask"></div>
+<script src="js/addUser.js"></script>
+</body>
+</html>

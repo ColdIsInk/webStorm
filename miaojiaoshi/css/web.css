@@ -1,0 +1,199 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+ul,li,ol{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:none;
+}
+body {
+    font-family:Arial, Verdana, "微软雅黑","宋体";
+}
+.clears{
+    clear:both;
+    border:none;
+    line-height:0;
+    font-size:0;
+    height:0;
+    overflow:hidden;
+}
+/*头部*/
+.head{
+    height: 80px;
+    background: #f8f8f8;
+    position: relative;
+}
+.head-con {
+    width: 976px;
+    position: absolute;
+    left: 200px;
+}
+.logo{
+    float: left;
+    overflow: hidden;
+}
+.enjoy{
+    float: left;
+    height: 40px;
+    width: 230px;
+    font-size: 34px;
+    font-family: 方正舒体;
+    color: #72272c;
+    margin-left: 10px;
+    margin-top: 20px;
+    line-height: 40px;
+    border-left: #c6cccc 1px solid;
+    text-align: center;
+}
+.phone{
+    float: right;
+}
+.text{
+    display: inline-block;
+    font-family: 微软雅黑;
+    font-size: 10px;
+    margin-top: 25px;
+}
+.number{
+    font-family: Impact;
+    font-size: 30px;
+}
+/*导航*/
+.nav{
+    height: 45px;
+    min-width: 1000px;
+    background: #451719;
+    position: relative;
+}
+.navigation{
+    width: 1000px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navigation>li{
+    float: left;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+    background: #451719;
+}
+.navigation>li>a{
+    display: inline-block;
+    color: #ffffff;
+    width: 100px;
+    height: 45px;
+    background:url(../img/color-1.png) 0px -45px repeat-x;
+    transition:all 0.4s;
+}
+
+.navigation>li a:hover{
+    color: #060109;
+    background-position:0 0;
+}
+.second{
+    display: none;
+    background: #e6c88f;
+    position: absolute;
+    z-index: 9999;
+}
+.second li a{
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: #060109;
+    line-height:30px;
+    background:url(../img/color-2.png) 0px -30px repeat-x;
+    transition:all 0.3s;
+}
+.second li a:hover{
+    color: white;
+    background-position:0px 0px;
+}
+.navigation>li:hover .second{
+    display: block;
+}
+/*内容*/
+.content{
+    margin-top: 20px;
+    height: 360px;
+    width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content li{
+    float: left;
+}
+.news{
+    padding-top: 30px;
+    width: 680px;
+    height: 300px;
+    background: #f8f8f8; ;
+}
+.news-con{
+    margin-left: 25px;
+    margin-top: 20px;
+    width: 620px;
+    text-indent: 2em;
+}
+.commend{
+    margin-left: 40px;
+    width: 340px;
+    height: 270px;
+    background: #f8f8f8;
+    font-family: 微软雅黑;
+}
+.commend h4 a{
+    display: inline-block;
+    color: #898989;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.commend a:hover{
+    color: #ff3840;
+}
+
+/*尾部*/
+.foot{
+    width: 100%;
+    height: 300px;
+    background: #451719;
+}
+.show,.picture,.information{
+    border-right:#333333 1px solid;
+    float: left;
+    width: 160px;
+    height: 180px;
+    text-align: center;
+}
+.show a,.picture a,.information a{
+    display: inline-block;
+    margin-top: 10px;
+    color: #c6a878;
+}
+.show a:hover,.picture a:hover,.information a:hover{
+    color: #ff2c2f;
+}
+.foot li{
+    margin-top: 30px;
+}
+.show{
+    margin-left: 200px;
+}
+.foot li:nth-child(4){
+    float: left;
+    width: 300px;
+    margin-left: 60px;
+}
+.copyright{
+    color:#ffffff;
+    font-size: 14px;
+    margin-left: 520px;
+    padding-top: 250px;
+}

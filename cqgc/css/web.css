@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,li,ol{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:none;
+}
+body {
+    font-family:Arial, Verdana, "微软雅黑","宋体";
+}
+.clear{
+    clear:both;
+    border:none;
+    line-height:0;
+    font-size:0;
+    height:0;
+    overflow:hidden;
+}
+
+
+
+.banner{
+    width: 1200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*导航*/
+.nav{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #787fcc;
+    border:1px #c6cccc solid;
+    border-radius: 8px;
+    background: #c6cccc;
+    font-family: 微软雅黑;
+}
+.nav>ul>li{
+    margin-left: 18px;
+    float: left;
+}
+.nav{
+    position: relative;
+}
+.nav li ul li{
+    float: none;
+    display: none;
+    font-size: 18px;
+    margin-left: -6px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #787fcc;
+    border-top: 0;
+    background: #b3adff;
+    border-radius: 5px;
+}
+.nav li ul li:first-child{
+    border-top: 1px #787fcc dashed;
+}
+.nav li ul{
+    position: absolute;
+    z-index: 9999;
+}
+.nav li a:hover{
+    color: #ff3840;
+ }
+.nav li:hover ul li{
+    display: block;
+}
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 400px;
+}
+.content li{
+    float: left;
+}
+/*图说重工、专题栏目*/
+.caption,.special{
+    border: #c6cccc solid 1px;
+    margin-top:8px;
+    background: url("../img/portlet_title_2.jpg") repeat-x;
+}
+.special{
+    height: 245px;
+}
+.caption img{
+    margin-left: 50px;
+}
+.con-title{
+    height: 36px;
+    line-height: 36px;
+    color: #4e4dff;
+    margin-left: 10px;
+}
+/*学校动态*/
+.school,.notice{
+    width: 450px;
+}
+.school li{
+    float: none;
+    margin-top: 10px;
+    margin-left: 32px;
+    width:100%;
+    list-style-type: square;
+    color: #54ac9b;
+}
+.school li:nth-child(1){
+    border-top: #cccccc 2px solid;
+    margin-top: 0;
+    padding-top: 10px;
+}
+.school li>a{
+    display: inline-block;
+    width: 350px;
+    color: #000000;
+    border-bottom: #c6cccc 1px dashed;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+.school li a:hover{
+    color: #ff4e04;
+    text-decoration: underline;
+}
+.sch-title{
+    width: 100px;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 46px;
+    color: #2118cd;
+    text-align: center;
+    border:#c6cccc 1px solid ;
+    border-radius: 5px;
+}
+.more{
+    margin-left: 440px;
+    margin-top: -20px;
+}
+.time{
+    float: right;
+    color: #000000;
+}
+.notice li{
+    float: none;
+    margin-top: 10px;
+    margin-left: 32px;
+    width:100%;
+    list-style-type: square;
+    color: #54ac9b;
+}
+.notice li:nth-child(1){
+    border-top: #cccccc 2px solid;
+    margin-top: 0;
+    padding-top: 10px;
+}
+.notice li>a{
+    display: inline-block;
+    width: 350px;
+    color: #000000;
+    border-bottom: #c6cccc 1px dashed;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+.notice li a:hover{
+    color: #ff4e04;
+    text-decoration: underline;
+}
+.not-title{
+    width: 100px;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 66px;
+    color: #2118cd;
+    text-align: center;
+    border:#c6cccc 1px solid ;
+    border-radius: 5px;
+}
+/*数字校园登录*/
+.login,.track{
+    width: 320px;
+    margin-top: 8px;
+    margin-left: 46px;
+    border: #c6cccc 1px solid;
+}
+.login-title{
+    height: 32px;
+    color: #2118cd;
+    background: #f2f0f1;
+    line-height: 32px;
+    padding-left: 16px;
+}
+.username{
+    margin-top: 14px;
+    margin-left: 30px;
+}
+.password{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+input[type="text"]{
+    margin-left: 10px;
+    width: 200px;
+    height: 20px;
+}
+input[type="password"]{
+    margin-left: 10px;
+    margin-top: 4px;
+    width: 200px;
+    height: 20px;
+}
+.remember{
+    margin-left: 30px;
+    margin-top: 6px;
+}
+
+input[type="button"]:nth-child(1){
+    width: 52px;
+    height: 32px;
+    margin-left: 90px;
+    margin-top: 10px;
+    background: #003277;
+    color: white;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+input[type="button"]:nth-child(2){
+    width: 90px;
+    height: 30px;
+    margin-left: 9px;
+    margin-top: 10px;
+    background: #003277;
+    color: white;
+    border-radius: 8px;
+}
+/*快速通道*/
+.track{
+    height: 274px;
+}
+.track-title {
+    height: 32px;
+    color: #2118cd;
+    background: #f2f0f1;
+    line-height: 32px;
+    padding-left: 16px;
+}
+.track a{
+    width: 110px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 36px;
+    color: #003277;
+    font-size: 14px;
+}
+.track a:hover{
+    color: #ff254c;
+}
+
+
+/* footer*/
+.end{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 130px;
+}
+.loge{
+    margin-left: 200px;
+   margin-top: 10px;
+}
+.qr-code{
+    margin-left: 50px;
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卷轴打开动画</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li,ol{
+            list-style:none;
+        }
+        img{
+            border: 0;
+            float: left;
+        }
+        .reel{
+            width: 100px;
+            height: 385px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .describe{
+            position: absolute;
+            top: 92px;
+            left: 72px;
+            width: 500px;
+            line-height: 27px;
+            font-size: 15px;
+        }
+        button{
+            width: 100px;
+            height: 42px;
+            line-height: 42px;
+            font-size: 20px;
+            background: #61ffda;
+            border-radius: 10px;
+        }
+        .btn{
+            width: 210px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+
+
+</head>
+<body>
+<div class="reel">
+    <ul class="image">
+        <li><img src="images/j1.png" height="385" width="50"/></li>
+        <li><img src="images/j2.png" height="385" width="360"/></li>
+        <li><img src="images/j3.png" height="385" width="370"/></li>
+        <li><img src="images/j4.png" height="385" width="50"/></li>
+    </ul>
+    <div class="describe">
+        &emsp;&emsp;重庆工程学院是经教育部批准设立的一所以工学为主，以软件、电子信息为特色，
+        经济管理和人文艺术等学科专业协调发展的全日制普通本科高校。学校长期坚持
+        “产教融合、校企合作”的办学模式，培养了一大批社会急需的软件工程、网络工程、
+        物联网工程、土木工程、电子信息工程、信息安全、云计算、数字媒体艺术、游戏动漫、
+        电子商务、市场营销、财务管理和信息服务等专业领域的高素质应用型、技术技能型人才。
+    </div>
+</div>
+<div class="btn">
+    <button id="open">打开卷轴</button>
+    <button id="close">关闭卷轴</button>
+</div>
+
+<script src="js/reel.js"></script>
+</body>
+</html>

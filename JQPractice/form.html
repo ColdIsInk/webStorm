@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格数据及时过滤</title>
+
+    <style>
+        div{
+            font-size: 22px;
+            margin-left: 20px;
+        }
+        input[type="text"]{
+            width: 300px;
+            height: 26px;
+            margin-left: 10px;
+        }
+        table{
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+      tr{
+          height: 36px;
+          border-bottom: #cccccc 1px solid;
+      }
+      table tr:first-child{
+          background:#cccccc;
+      }
+        table td:first-child{
+            width: 40px;
+        }
+        table td:nth-child(2){
+            width: 300px;
+        }
+      table td:nth-child(3){
+          width: 150px;
+      }
+        table td:nth-child(4){
+            width: 100px;
+        }
+        .td-bck{
+            background: #ffaf9c;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+
+
+</head>
+<body>
+<div>
+    过滤条件<input type="text" placeholder="  请输入过滤条件" id="text">
+</div>
+  <table>
+      <tr>
+          <td>#</td>
+          <td>President</td>
+          <td>Terms</td>
+          <td>Tenure</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>George Washington</td>
+          <td>two</td>
+          <td>1789-1</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>John Adams</td>
+          <td>one</td>
+          <td>1797-1</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Thomas Jefferson</td>
+          <td>two</td>
+          <td>1801-1</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>James Madison</td>
+          <td>two</td>
+          <td>1809-1</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>James Monroe</td>
+          <td>two</td>
+          <td>1817-1</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>John Quimcy Adams</td>
+          <td>one</td>
+          <td>1825-1</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>Andrew Jackson</td>
+          <td>two</td>
+          <td>1829-1</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>Martin Van Buren</td>
+          <td>one</td>
+          <td>1837-1</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>William Henry Harrison</td>
+          <td>one-partial</td>
+          <td>1841</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>John Tyler</td>
+          <td>one-partial</td>
+          <td>1841-1</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>James Knox Polk</td>
+          <td>one</td>
+          <td>1845-1</td>
+      </tr>
+  </table>
+
+<script src="js/form.js"></script>
+
+</body>
+</html>

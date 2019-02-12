@@ -1,0 +1,41 @@
+div{
+  width: 300px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 18px;
+  margin-top: 20px;
+  #name{
+    width: 280px;
+    height: 36px;
+    margin-top: 10px;
+  }
+  button{
+    width: 132px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 18px;
+    background: #02a3c0;
+    color: #FFFFFF;
+  }
+  #query{
+    background: #ffa902;
+    margin-left: 14px;
+  }
+}
+table{
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  tr{
+    &:first-child{
+      background: #eeeeee;
+    }
+    td{
+      text-align: center;
+      width: 180px;
+      height: 30px;
+      border: #9c9c9c 1px solid;
+    }
+  }
+}

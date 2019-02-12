@@ -1,0 +1,266 @@
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+}
+ul,li,ol{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  border:none;
+}
+body {
+  font-family:Arial, Verdana, "微软雅黑";
+}
+.clears{
+  clear:both;
+  border:none;
+  line-height:0;
+  font-size:0;
+  height:0;
+  overflow:hidden;
+}
+
+.head{
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: 方正舒体;
+  font-size: 30px;
+  background: #a9ffe9;
+}
+
+.info{
+  height: 300px;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  .bgImg{
+    opacity: 0.3;
+    filter: blur(10px);
+    position: absolute;
+  }
+  >ul>li{
+    float: left;
+    .singerImg{
+      position:relative;
+      top: 60px;
+      left:20px;
+      border: solid 3px #000000;
+      border-radius: 50%;
+    }
+    .singer{
+      margin-top: 20px;
+      margin-left: 40px;
+      font-size: 26px;
+    }
+    .song{
+      margin-top: 100px;
+      margin-left: 40px;
+      font-size: 40px;
+      font-family: 华文行楷;
+      font-weight: 800;
+      color: #000000;
+    }
+  }
+}
+.time{
+  height: 50px;
+  line-height: 50px;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  li{
+    float: left;
+    font-size: 24px;
+    &:nth-child(3){
+      float: right;
+    }
+  }
+  .progress{
+    position: relative;
+    input[type="range"] {
+      cursor:pointer;
+      position: absolute;
+      top:20px;
+      left: 10px;
+      width: 458px;
+      outline: none;//去除边框
+      -webkit-appearance: none; //设置默认的为空
+      &::-webkit-slider-runnable-track { //轨道
+        height: 10px;
+        box-shadow: 0 1px 1px #37c3ff, inset 0 .125em .125em #37c3ff;
+        border-radius: 5px;
+      }
+      &::-webkit-slider-thumb { //滑块
+        -webkit-appearance: none;
+      }
+    }
+    .pro_cover{
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      //width: 458px;
+      height: 10px;
+      border-radius: 5px;
+      background: #31a0fe;
+    }
+  }
+
+}
+
+.function {
+  width: 600px;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  button {
+    background: none;
+    border: 0;
+    outline: none;
+    filter: grayscale(60%);
+    &:hover {
+      filter: grayscale(0%)
+    }
+    &:nth-child(2) {
+      margin-left: 10px;
+      margin-right: 10px;
+
+    }
+    &:nth-child(3) {
+      display: none;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    &:nth-child(5) {
+      position: absolute;
+      top: 50px;
+    }
+    &:nth-child(6) {
+      position: absolute;
+      top: 50px;
+      display: none;
+    }
+    &:nth-child(8) {
+      position: absolute;
+      top: 46px;
+      left: 420px;
+    }
+    &:nth-child(9) {
+      position: absolute;
+      top: 46px;
+      left: 470px;
+    }
+  }
+    input[type="range"] {
+      position: absolute;
+      top: 66px;
+      left: 267px;
+      -webkit-appearance: none;
+      outline: none;
+      &::-webkit-slider-runnable-track { //轨道
+        height: 2px;
+        width: 130px;
+        background: #999999;
+      }
+      &::-webkit-slider-thumb { //滑块
+        z-index:999;
+        -webkit-appearance: none;
+         height: 15px;
+        width: 15px;
+        margin-top: -6px;
+        background: #61ffda;
+        border-radius: 50%;
+        border: solid 0.125em rgba(205, 224, 230, 0.5);
+      }
+    }
+
+  }
+
+  .list {
+    position: absolute;
+    top: -200px;
+    left: 350px;
+    width: 230px;
+    height: 220px;
+    font-size: 17px;
+    margin-left: 20px;
+    border: #cccccc 1px solid;
+    .list-title {
+      background: #61ffda;
+      width: 215px;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 15px;
+      .close {
+        font-size: 30px;
+        margin-right: 6px;
+        float: right;
+        color: #333333;
+      }
+    }
+    .songsList {
+      background: white;
+      a {
+        display: inline-block;
+        padding-left: 15px;
+        width: 215px;
+        height: 32px;
+        line-height: 32px;
+        color: black;
+        &:hover {
+          background: #cccccc;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+ .way{
+  margin-top: 80px;
+   width: 110px;
+   float: right;
+   margin-right: 20px;
+  background: #61ffda;
+  li{
+    cursor:pointer;
+    width: 110px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    position: relative;
+    img{
+      padding-top: 8px;
+      padding-left: 10px;
+    }
+    span{
+      position: absolute;
+      top:0px;
+      left:36px;
+    }
+    &:hover{
+      background: #cccccc;
+      color: #ffffff;
+    }
+  }
+
+}
+
+.voice_cover{
+  z-index:1;
+  position: absolute;
+  top: 66px;
+  left: 267px;
+  height: 2px;
+  width: 60px;
+  background: #61ffda;
+}

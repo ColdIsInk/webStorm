@@ -1,0 +1,129 @@
+@charset "utf-8";
+body{
+  background: url("../images/menu.png") no-repeat;
+  background-size: 100% 1100px;
+}
+nav{
+  height: 40px;
+  background: #61ffda;
+  ul{
+    width: 700px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    li{
+      float: left;
+      width: 100px;
+      height: 40px;
+      border-right: #31a0fe 1px solid;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 20px;
+      font-family: 隶书;
+      a{
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        color: #333333;
+      }
+      &:nth-child(3){
+        width: 200px;
+        letter-spacing: 0px;
+        a{
+          width: 200px;
+          height: 40px;
+        }
+      }
+      &:nth-child(6){
+        width: 50px;
+        border: none;
+        font-size: 14px;
+        a{
+          width: 50px;
+          height: 40px;
+        }
+      }
+    }
+    .nav_li_hover{
+      background: rgba(244,67,126,0.93);
+      a{
+        color: #FFFFFF;
+      }
+
+    }
+  }
+}
+
+main{
+  width: 760px;
+  height: 554px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  ul{
+    width:760px;
+    li{
+      float: left;
+      margin-left: 50px;
+      height: 280px;
+      &:first-child,&:nth-child(4){
+        margin-left: 0px;
+      }
+      h4{
+        text-align: center;
+        color: #6A6AFF;
+        margin-top: 10px;
+      }
+      p{
+        width: 220px;
+        height: 40px;
+        span{
+          display: inline-block;
+          margin-top: 8px;
+          color: #ff0000;
+          font-size: 17px;
+        }
+
+        button{
+          width: 80px;
+          height: 32px;
+          float: right;
+          font-size: 18px;
+          background: #31a0fe;
+          border: none;
+          &:hover{
+            background: #ff2c2f;
+            color: #FFFFFF;
+          }
+        }
+
+      }
+    }
+  }
+  #two,#there{
+    display: none;
+  }
+}
+
+footer{
+  width: 300px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  button{
+    width: 50px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    &:hover{
+      background: #ff2c2f;
+      color: #FFFFFF;
+    }
+  }
+  .btn_cli{
+    background: #ff2c2f;
+    color: #FFFFFF;
+  }
+}

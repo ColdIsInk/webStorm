@@ -1,0 +1,27 @@
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+}
+ul,li,ol{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  border:none;
+}
+table{
+  border: none;
+  border-collapse: collapse;
+}
+
+.clear{
+  clear:both;
+  border:none;
+  line-height:0;
+  font-size:0;
+  height:0;
+  overflow:hidden;
+}

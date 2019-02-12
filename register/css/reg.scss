@@ -1,0 +1,60 @@
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+}
+ul,li,ol{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  border:none;
+}
+body {
+  font-family:Arial, Verdana, "微软雅黑","宋体";
+}
+.clears{
+  clear:both;
+  border:none;
+  line-height:0;
+  font-size:0;
+  height:0;
+  overflow:hidden;
+}
+
+form{
+  width: 304px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  h1{
+    margin-bottom: 10px;
+  }
+  .agree{
+    font-size: 18px;
+  }
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="tel"]{
+  width: 300px;
+  height: 36px;
+  margin-top: 10px;
+}
+input[type="checkbox"]{
+  margin-top: 20px;
+  font-size: 20px;
+  width: 18px;
+  height: 18px;
+}
+input[type="submit"]{
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: white;
+  background: #37c3ff;
+  border-radius: 8px;
+  margin-top: 15px;
+}

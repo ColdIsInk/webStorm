@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css">
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.ztree.core.min.js"></script>
+<style>
+    .tree{
+        font-size: 14px;
+        color: #333333;
+    }
+</style>
+
+</head>
+<body>
+<div class="tree">
+    <ul id="treeDemo" class="ztree">&emsp;</ul>
+</div>
+
+<script>
+
+    var zTreeObj;
+    var setting = {
+        view: {
+            dblClickExpand: false,//双击节点时，是否自动展开父节点的标识
+            showLine: true,//是否显示节点之间的连线
+            fontCss:{'color':'black','font-weight':'bold'},//字体样式函数
+            selectedMulti: true //设置是否允许同时选中多个节点
+        },
+        check:{
+            //chkboxType: { "Y": "ps", "N": "ps" },
+            chkboxType: { "Y": "", "N": "" },
+            chkStyle: "checkbox",//复选框类型
+            enable: true //每个节点上是否显示 CheckBox
+        },
+        edit:{
+            enable: true,
+            editNameSelectAll: true,
+            showRemoveBtn : true,
+            showRenameBtn : true,
+            removeTitle : "remove",
+            renameTitle : "rename"
+        },
+        data: {
+            simpleData: {//简单数据模式
+                enable:true,
+                idKey: "id",
+                pIdKey: "IPARENTID",
+                rootPId: null
+            }
+        },
+
+        callback: {
+            onClick: function (event, treeId, treeNode, clickFlag) {
+                console.log(treeNode.id)//当前li的id，注意是dom id，原始的id自己去掉前缀treeDemo_，其中treeDemo是ztree容器id
+                console.log(treeNode.name)
+            }
+        }
+
+    };
+
+    var zNodes =[
+        { id:1, pId:0, name:"父节点1 - 展开", open:true,isParent:true,  iconOpen:"img/open.png", iconClose:"img/close.png",
+            children:[
+                { id:11, pId:1, name:"父节点11 - 折叠",
+                    children:[
+                        { id:111, pId:11, name:"叶子节点111"},
+                        { id:112, pId:11, name:"叶子节点112"},
+                        { id:113, pId:11, name:"叶子节点113"},
+                        { id:114, pId:11, name:"叶子节点114"},
+                    ]
+                },
+                { id:12, pId:1, name:"父节点12 - 折叠",
+                    children:[
+                        { id:121, pId:12, name:"叶子节点121"},
+                        { id:122, pId:12, name:"叶子节点122"},
+                        { id:123, pId:12, name:"叶子节点123"},
+                        { id:124, pId:12, name:"叶子节点124"},
+                    ]
+                },
+                { id:13, pId:1, name:"父节点13 - 没有子节点",isParent:true,open:true},
+
+            ]
+        },
+
+        { id:2, pId:0, name:"父节点2 - 折叠", isParent:true,
+            children:[
+                { id:21, pId:2, name:"父节点21 - 展开"},
+                { id:22, pId:2, name:"父节点22 - 折叠"},
+                { id:23, pId:2, name:"父节点23 - 折叠",
+                    children:[
+                        { id:231, pId:23, name:"叶子节点231"},
+                        { id:232, pId:23, name:"叶子节点232"},
+                        { id:233, pId:23, name:"叶子节点233"},
+                        { id:234, pId:23, name:"叶子节点234"},
+                    ]
+                },
+            ]
+        },
+        { id:3, pId:0, name:"父节点3 - 没有子节点", isParent:true}
+
+
+    ];
+
+    $(document).ready(function(){
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting,zNodes);
+    });
+
+    function click(e,treeId,treeNode){
+        var treeObj=$.fn.zTree.getZTreeObj("treeDemo"),
+            nodes=treeObj.getCheckedNodes(true),
+            v="";
+        for(var i=0;i<nodes.length;i++){
+            v+=nodes[i].name + ",";
+            console.log("节点id:"+nodes[i].id+"节点名称"+v);//获取选中节点的值
+        }
+
+
+    }
+
+
+</script>
+</body>
+</html>

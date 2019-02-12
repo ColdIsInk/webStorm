@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>脸部识别</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/face.js"></script>
+    <style>
+    ul, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #pics {
+        position: relative;
+    }
+
+    #inputImage{
+        width: 520px;
+        height: 30px;
+    }
+    button{
+        height: 34px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .area {
+        position: absolute;
+        z-index: 999;
+        background-color: blue;
+        opacity: 0.3;
+        display: none;
+        cursor: pointer;
+    }
+
+    #tooltip {
+        position: absolute;
+        z-index: 1000;
+        background-color: #cdcdcd;
+        color: magenta;
+        opacity: 0.8;
+        display: none;
+        width: 120px;
+        height: 150px;
+    }
+
+</style>
+</head>
+<body>
+<h1>面部探测:</h1>
+输入一张正常的人脸图片url，然后点击 <strong>开始分析</strong> 按钮。
+<br><br>
+图片网址: <input type="text" name="inputImage" id="inputImage" value="http://img.mingxing.com//mingxing//20180314/303858b601e81c098ffde40ad9940c78.jpg"/>
+<button>开始分析</button>
+<br><br>
+<div id="wrapper" style="width:1020px; display:table;">
+    <div id="imageDiv" style="width:420px; display:table-cell;">
+        图片显示如下:
+        <br><br>
+        <div id="pics">
+            <img id="sourceImage" width="400"/>
+        </div>
+    </div>
+    <div id="tooltip">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</div>
+
+</body>
+</html>

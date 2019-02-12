@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .lunbo{
+            width: 700px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .number{
+            position: absolute;
+            left: 540px;
+            top: 360px;
+        }
+        .number a{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            background: #61ffda ;
+        }
+        .number>span .number-bck{
+            background: #ff1f15;
+            color: #ff95dc;
+        }
+    </style>
+
+</head>
+<body>
+<div class="lunbo">
+<div class="picture">
+    <p><img src="images/pic1.jpg" height="400" width="700"/></p>
+    <p><img src="images/pic2.jpg" height="400" width="700"/></p>
+    <p><img src="images/pic3.jpg" height="400" width="700"/></p>
+    <p><img src="images/pic4.jpg" height="400" width="700"/></p>
+    <p><img src="images/pic5.jpg" height="400" width="700"/></p>
+</div>
+<div class="number">
+    <span><a href="#">1</a> </span>
+    <span><a href="#">2</a></span>
+    <span><a href="#">3</a></span>
+    <span><a href="#">4</a></span>
+    <span><a href="#">5</a></span>
+</div>
+</div>
+<script src="js/lunbo.js"></script>
+</body>
+</html>
